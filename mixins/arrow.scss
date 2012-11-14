@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// Mixin for making an css arrow
+// -----------------------------------------------------------------------------
+//
+@mixin arrow($size, $direction, $alignment, $color) {
+  content: "";
+  border: $size solid transparent;
+
+  @if ($direction == "top") {
+    border-bottom-color: $color;
+    top: -$size * 2;
+    right: 20px;
+  }
+
+  @if ($direction == "right") {
+    border-left-color: $color;
+    right: -$size * 2;
+    top: 20px;
+  }
+
+  @if ($direction == "bottom") {
+    border-top-color: $color;
+    bottom: -$size * 2;
+    right: 20px;       
+  }
+
+  @if ($direction == "left") {
+    border-right-color: $color;
+    left: -$size * 2;
+    top: 20px;    
+  }
+  
+  @if ($alignment == "center") {
+    margin-left: -$size;
+    left: 50%;
+  }  
+  
+  @if ($alignment == "middle") {
+    margin-top: -$size;
+    top: 50%;
+  }  
+
+  height: 0;
+  position: absolute;
+  width: 0;
+}
