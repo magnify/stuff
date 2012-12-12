@@ -1,0 +1,71 @@
+@import "zen";
+
+$zen-column-count: 12;
+$zen-gutter-width: 20px;
+
+body {
+  background-color: #546026;
+  color: #222;
+  text-align: center;
+}
+
+.grid {
+  @include zen-grid-container;
+
+  background-color: #d1ee60;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.grid-wrapper {
+  border-top: 1px solid gray;  
+  clear: both;
+  overflow: hidden;
+}
+
+.grid-wrapper-fix {
+  clear: both;
+  margin-right: -10px;
+  margin-left: -10px;
+  overflow: hidden;
+
+  &:before {
+    border-top: 1px solid gray;  
+    content: "";
+    display: block;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+%grid {
+  margin-top: 20px;
+
+  .content {
+    background-color: #bad455;
+    padding: 20px;  
+  }
+}
+
+.grid-first {  
+  @include zen-grid-item(3, 1);
+  @extend %grid;
+}
+
+.grid-second {
+  @include zen-grid-item(3, 4);
+  @extend %grid;
+}
+
+.grid-third {  
+  @include zen-grid-item(3, 4, right);
+  @extend %grid;
+}
+
+.grid-fourth {  
+  @include zen-grid-item(3, 1, right);
+  @extend %grid;
+}
