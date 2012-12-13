@@ -41,8 +41,21 @@ body {
   }
 }
 
+.grid-wrapper-fix-background {
+  clear: both;
+  overflow: hidden;
+
+  .background-wrapper {
+    background-color: #fff;
+    overflow: hidden;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+}
+
 %grid {
   margin-top: 20px;
+  margin-bottom: 20px;  
 
   .content {
     background-color: #bad455;

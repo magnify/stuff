@@ -48,16 +48,30 @@ body {
 }
 
 /* line 44, ../sass/zen-grid-test.scss */
+.grid-wrapper-fix-background {
+  clear: both;
+  overflow: hidden;
+}
+/* line 48, ../sass/zen-grid-test.scss */
+.grid-wrapper-fix-background .background-wrapper {
+  background-color: #fff;
+  overflow: hidden;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+/* line 56, ../sass/zen-grid-test.scss */
 .grid-first, .grid-second, .grid-third, .grid-fourth {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
-/* line 47, ../sass/zen-grid-test.scss */
+/* line 60, ../sass/zen-grid-test.scss */
 .grid-first .content, .grid-second .content, .grid-third .content, .grid-fourth .content {
   background-color: #bad455;
   padding: 20px;
 }
 
-/* line 53, ../sass/zen-grid-test.scss */
+/* line 66, ../sass/zen-grid-test.scss */
 .grid-first {
   float: left;
   width: 25%;
@@ -72,7 +86,7 @@ body {
   word-wrap: break-word;
 }
 
-/* line 58, ../sass/zen-grid-test.scss */
+/* line 71, ../sass/zen-grid-test.scss */
 .grid-second {
   float: left;
   width: 25%;
@@ -87,7 +101,7 @@ body {
   word-wrap: break-word;
 }
 
-/* line 63, ../sass/zen-grid-test.scss */
+/* line 76, ../sass/zen-grid-test.scss */
 .grid-third {
   float: right;
   width: 25%;
@@ -102,7 +116,7 @@ body {
   word-wrap: break-word;
 }
 
-/* line 68, ../sass/zen-grid-test.scss */
+/* line 81, ../sass/zen-grid-test.scss */
 .grid-fourth {
   float: right;
   width: 25%;
